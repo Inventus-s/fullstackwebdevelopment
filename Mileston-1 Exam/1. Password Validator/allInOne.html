@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+    <!-- CSS -->
+    <style>* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background-image: url("https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&w=6000");
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    
+    .container {
+        background-color: #fff;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    input {
+        width: 90%;
+        height: 35px;
+        font-style: italic;
+    }
+    
+    #inputPassword {
+        margin-top: 20px;
+    }
+    
+    button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        padding: 5px 20px;
+        font-size: 15px;
+        /* font-weight: 500; */
+        color: #fff;
+        background-color: #1c96d5;
+        border: none;
+        border-radius: 10px;
+    }</style>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Project Start -->
+    <div class="container">
+        <h1>Password Validator</h1>
+        <!-- input -->
+            <input type="password" id="inputPassword" placeholder="   Password">
+            
+            <input type="password" id="confirmPassword" placeholder="   confirmPassword">
+            
+            <button id="submit">Validate</button>
+    </div>
+    <!-- Script -->
+    <script>// storing elements
+
+        const iPassword = document.getElementById("inputPassword");
+        const cPassword = document.getElementById("confirmPassword");
+        const submit = document.getElementById("submit");
+        
+        // logic
+        
+        submit.addEventListener("click", (e) => {
+             const inputPassword = iPassword.value;
+             const confirmPassword = cPassword.value;
+             if (inputPassword === confirmPassword) {
+                submit.style.backgroundColor = "green";
+                alert("Password Matched. Password validation Successful.")
+             } else{
+                submit.style.backgroundColor = "red";
+                alert("Password didn't match. Password validation unsuccessful")
+             }
+        });</script>
+</body>
+</html>
