@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <!-- Link CSS -->
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 92.3vh;
+    width: 90vw;
+    background-image: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=6000');
+    background-size: 100% 100%;
+}
+form{
+    margin: 50px auto;
+    display: block;
+    max-width: 500px;
+    /* background-color: #eb0a0a; */
+    padding: 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #987289;
+    border: none;
+    background-image: linear-gradient(#4aa3cd, #eecc75);
+}
+
+label {
+    font-size: 30px;
+}
+
+input {
+    display: block;
+    margin-top: 10px;
+    height: 35px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 10px ;
+    border: none;
+    background-color: #0776aa;
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #0aa0e6;
+}
+
+div {
+    align-items: center;
+    margin-top: 20px;
+}
+
+    </style>
+    <!-- Link Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Project Start -->
+    <form>
+        <label for="nameInput" id="lable">Enter Your Name:</label>
+        <input type="text" id="nameInput" name="nameInput" placeholder="e.g., Mukund Kumar" style="font-style: italic;">
+        <button type="button" id="button">Count Vowel</button>
+        <div id="result"></div>
+        <!-- link javaScript -->
+        <script>
+            // vowel count in Name
+const submit = document.getElementById('button');
+submit.addEventListener("click", () => {
+  const nameInput = document.getElementById('nameInput').value; // innerText or textContain not working
+  let vowelCount = 0;
+  for (let i = 0; i < nameInput.length; i++) {
+    let char = nameInput.charAt(i).toLowerCase();
+    if(char=='a' || char=='o' || char=='e'|| char=='i' || char=='u') {
+    vowelCount++ ;
+    }
+  }
+  document.getElementById('result').textContent = `Your name has ${vowelCount} vowels.` ;
+});
+        </script>
+    </form>
+</body>
+</html>
