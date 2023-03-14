@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <!-- link CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!-- Project Start -->
+    <div class="container">
+      <h1>Temperature Converter</h1>
+      <form onsubmit="convert(event)">
+        <label for="celsius">Celsius:</label>
+        <input type="number" id="celsius" name="celsius" required>
+        <button type="submit">Convert</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <!-- link Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

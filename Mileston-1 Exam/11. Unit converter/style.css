@@ -1,0 +1,47 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: inline-block;
+  }
+  
+  label {
+    font-size: 24px;
+  }
+  
+  input {
+    width: 200px;
+    font-size: 24px;
+  }
+  
+  button {
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #error {
+    color: red;
+  }
+  
+  #result {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  
