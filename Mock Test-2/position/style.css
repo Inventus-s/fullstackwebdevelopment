@@ -1,0 +1,46 @@
+.box{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* Static */
+.static{
+    position: static; 
+    background-color: sandybrown;
+}
+
+/* Fixed */
+.fixed{
+    position: fixed;
+    bottom: 10px; 
+    right: 10px;
+    background-color: firebrick;
+}
+
+/* Sticky */
+.sticky{
+    position: sticky;
+    top: 100px;
+    left: 250px;
+    background-color: silver;
+    overflow: scroll;
+}
+
+/* Relative */
+.relative{
+    position: relative;
+    top: 100px;
+    /* left: 200px; */
+    background-color: rebeccapurple;
+    overflow: scroll;
+}
+
+/* Absolute */
+.absolute{
+    position: absolute; 
+    top: 10px; 
+    left: 600px;
+    background-color: antiquewhite;
+}

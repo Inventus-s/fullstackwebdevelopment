@@ -1,0 +1,17 @@
+
+An execution context (EC) is a runtime environment for executing a JavaScript code. It contains the following:
+1. Variable environment: This is a collection of variables that are accessible to the code in the execution context.
+2. Function environment: This is a collection of functions that are accessible to the code in the execution context.
+3. Scope chain: This is a chain of objects that represent the hierarchy of scopes in the execution context.
+This: This is a special variable that refers to the object that is currently executing the code.
+
+
++-------------------------- ------------------------+
+| Execution Context |                                 |
++--------------------------------------------------+
+| Variable Environment | Function Environment | Scope Chain |
++--------------------------------------------------+
+| <variable1> | <function1> | <global object> |
+| <variable2> | <function2> | <object1> |
+| <variable3> | <function3> | <object2> |
++--------------------------------------------------+

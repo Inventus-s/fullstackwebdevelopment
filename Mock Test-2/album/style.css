@@ -1,0 +1,89 @@
+/* Conatiner Grid */
+.container{
+    display: grid;
+    height: 500px;
+    width: 500px;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px 100px ;
+    /* border: 2px solid yellow; */
+}
+
+.box{
+    /* height: 100px;
+    width: 100px; */
+    /* border: 2px solid black; */
+}
+
+.box1{
+    /* background-color: red; */
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.box11 {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: saddlebrown;
+    background-image: url("https://images.pexels.com/photos/15075000/pexels-photo-15075000/free-photo-of-woman-in-pink-tank-top-with-colorful-strip-scarf-lying-on-ball-pit.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: cover;
+}
+
+.box12{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    /* grid-row-start: 1; */
+    grid-row-end: 2;
+    background-color: khaki;
+    background-image: url("https://images.pexels.com/photos/16738839/pexels-photo-16738839/free-photo-of-jaipur-india.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: cover;
+}
+
+.box13{
+    background-color: tan;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("https://images.pexels.com/photos/2850287/pexels-photo-2850287.jpeg?auto=compress&cs=tinysrgb&w=400");
+    background-size: cover;
+}
+
+.box2 {
+    background-color: green;
+    /* height: 240px; */
+    background-image: url("https://images.pexels.com/photos/17444394/pexels-photo-17444394/free-photo-of-soviet-chic.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: cover;
+    
+}
+
+.box3 {
+    background-color: orange;
+    background-image: url("https://images.pexels.com/photos/17376489/pexels-photo-17376489/free-photo-of-coqs.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: cover;
+}
+
+.box4{
+    background-color: brown;
+    grid-column-start: 3;
+    background-image: url("https://images.pexels.com/photos/17430674/pexels-photo-17430674.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: cover;
+
+}
+
+.box5 {
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.box6 {
+    background-color: pink;
+}
