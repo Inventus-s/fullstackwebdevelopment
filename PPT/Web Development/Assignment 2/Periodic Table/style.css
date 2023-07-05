@@ -1,0 +1,37 @@
+/* section to middle of body */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style h1 */
+h1{
+    text-align: center;
+    border-bottom: 2px dotted;
+}
+table{
+    text-align: center;
+}
+
+
+/* Pink */
+.pink{
+    background-color: #ff9a9a;
+}
+
+/* yellow */
+.yellow{
+    background-color: #fdff8d;
+}
+
+/* Blue */
+.blue{
+    background-color: #9acdff;
+}
+
+/* Grey */
+.grey{
+    background-color: #9cff9a;
+}
