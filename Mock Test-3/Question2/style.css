@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Input Box App */
+
+section{
+    height: 100vh;
+    /* width: 300px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+h2{
+    display: block;
+}
+
+#text-input{
+    /* height: 25px; */
+    padding: 5px 10px;
+}
+
+#btn{
+    /* width: 150px; */
+    /* height: 25px; */
+    padding: 7px 50px;
+}
