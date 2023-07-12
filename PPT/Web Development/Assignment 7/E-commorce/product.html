@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+    <style>
+        /* ... CSS styles ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-details" id="productDetails">
+            <!-- Product details will be displayed here -->
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <button id="closeCartBtn">Close</button>
+        </div>
+    </div>
+
+    <script>
+        var productId = localStorage.getItem("productId");
+
+        fetch("https://fakestoreapi.com/products/" + productId)
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch product details.");
+                }
+                return response.json();
+            })
+            .then(function (product) {
+                displayProductDetails(product);
+            })
+            .catch(function (error) {
+                console.log("Error:", error.message);
+            });
+
+        function displayProductDetails(product) {
+            var productDetailsContainer = document.getElementById("productDetails");
+
+            var image = document.createElement("img");
+            image.src = product.image;
+            productDetailsContainer.appendChild(image);
+
+            var title = document.createElement("h2");
+            title.textContent = product.title;
+            productDetailsContainer.appendChild(title);
+
+            var price = document.createElement("p");
+            price.textContent = "Price: $" + product.price.toFixed(2);
+            productDetailsContainer.appendChild(price);
+
+            var category = document.createElement("p");
+            category.textContent = "Category: " + product.category;
+            productDetailsContainer.appendChild(category);
+
+            var description = document.createElement("p");
+            description.textContent = "Description: " + product.description;
+            productDetailsContainer.appendChild(description);
+
+            var addToCartBtn = document.createElement("button");
+            addToCartBtn.textContent = "Add to Cart";
+            addToCartBtn.addEventListener("click", function () {
+                addToCart(product);
+            });
+            productDetailsContainer.appendChild(addToCartBtn);
+        }
+
+        function addToCart(product) {
+            var cartItems = localStorage.getItem("cartItems");
+            var cartItemsArray = cartItems ? JSON.parse(cartItems) : [];
+            var existingItem = cartItemsArray.find(function (item) {
+                return item.id === product.id;
+            });
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                product.quantity = 1;
+                cartItemsArray.push(product);
+            }
+            localStorage.setItem("cartItems", JSON.stringify(cartItemsArray));
+            showCart();
+        }
+
+        function showCart() {
+            var cartOverlay = document.getElementById("cartOverlay");
+            var cartItemsContainer = document.getElementById("cartItems");
+            var closeCartBtn = document.getElementById("closeCartBtn");
+
+            cartItemsContainer.innerHTML = "";
+
+            var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+            if (cartItems && cartItems.length > 0) {
+                cartItems.forEach(function (item) {
+                    var cartItem = document.createElement("div");
+                    cartItem.className = "cart-item";
+
+                    var image = document.createElement("img");
+                    image.src = item.image;
+                    cartItem.appendChild(image);
+
+                    var info = document.createElement("div");
+                    info.className = "cart-item-info";
+
+                    var title = document.createElement("h4");
+                    title.textContent = item.title;
+                    info.appendChild(title);
+
+                    var price = document.createElement("p");
+                    price.textContent = "$" + item.price.toFixed(2);
+                    info.appendChild(price);
+
+                    var quantity = document.createElement("p");
+                    quantity.textContent = "Quantity: " + item.quantity;
+                    info.appendChild(quantity);
+
+                    cartItem.appendChild(info);
+                    cartItemsContainer.appendChild(cartItem);
+                });
+            } else {
+                var emptyMessage = document.createElement("p");
+                emptyMessage.textContent = "Your cart is empty.";
+                cartItemsContainer.appendChild(emptyMessage);
+            }
+
+            cartOverlay.style.display = "block";
+
+            closeCartBtn.addEventListener("click", function () {
+                cartOverlay.style.display = "none";
+            });
+        }
+    </script>
+</body>
+</html>

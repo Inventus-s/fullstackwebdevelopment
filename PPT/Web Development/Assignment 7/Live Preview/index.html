@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Preview - Publish Your Story</title>
+    <!-- link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Publish Your Story</h2>
+            <label for="storyName">Story Name:</label>
+            <input type="text" id="storyName" placeholder="Enter your story name">
+
+            <label for="imageUrl">Image URL:</label>
+            <input type="text" id="imageUrl" placeholder="Enter image URL">
+
+            <label for="authorName">Author Name:</label>
+            <input type="text" id="authorName" placeholder="Enter author name">
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" placeholder="Enter category">
+
+            <label for="story">Your Story:</label>
+            <textarea id="story" placeholder="Enter your story"></textarea>
+
+            <button id="submitBtn">Submit</button>
+        </div>
+
+        <div class="preview-section">
+            <h2>Preview</h2>
+            <div id="previewImage"></div>
+            <h3 id="previewStoryName"></h3>
+            <p id="previewAuthorName"></p>
+            <p id="previewCategory"></p>
+            <p id="previewStory"></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

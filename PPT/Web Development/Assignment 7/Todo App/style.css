@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+body{
+    background-color: #344fa1;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TODO input Section */
+
+header{
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 1px dotted black;
+    padding: 2rem;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    color: #fff;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.todo-input{
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: #fff;
+}
+
+.todo-submit{
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: #ce18ec;
+    color: #fff;
+}
+
+/* Todo List */
+
+.todo-list{
+    max-width: 35rem;
+    background-color: #031956;
+    margin: 1rem 4rem;
+    border-radius: 1rem;
+    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.list-para{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.list-btn{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: transparent;
+}
