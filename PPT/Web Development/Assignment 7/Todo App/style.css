@@ -21,7 +21,7 @@ body{
 header{
     max-width: 40rem;
     margin: 0 auto;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
     padding: 2rem;
 }
 
@@ -32,7 +32,7 @@ h1{
     color: #fff;
 }
 
-form{
+.todo{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,12 +52,18 @@ form{
     border: transparent;
     background-color: #ce18ec;
     color: #fff;
+    cursor: pointer;
 }
 
 /* Todo List */
 
+#main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .todo-list{
-    max-width: 35rem;
+    width: 35rem;
     background-color: #031956;
     margin: 1rem 4rem;
     border-radius: 1rem;
@@ -79,4 +85,49 @@ form{
     padding: 1rem;
     border-radius: 1rem;
     border: transparent;
+    cursor: pointer;
+}
+
+#btn-mark{
+    background-color: #008000;
+    color: #fff;
+}
+
+/* Edit List */
+
+.edit-list{
+    position: absolute;
+    width: 45rem;
+    background-color: #9564f3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.edit-input{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: transparent;
+}
+
+.update{
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: #031956;
+    color: #fff;
+}
+
+.close{
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    border: transparent;
+    background-color: #031956;
+    color: #fff;    
 }
