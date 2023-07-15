@@ -1,1 +1,1 @@
-All answers are in one HTML using React
+All answers are in one jsx using React
