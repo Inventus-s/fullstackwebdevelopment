@@ -1,0 +1,70 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-name {
+  flex: 1;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.remove-btn {
+  background-color: #f44336;
+}
+
+.status-btn {
+  background-color: #2196f3;
+}
