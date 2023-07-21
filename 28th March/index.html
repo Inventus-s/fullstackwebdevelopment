@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors</title>
+</head>
+<body>
+    <h1>Posts Data</h1>
+  <div id="posts"></div>
+
+  <script>
+    function fetchDataFromAPI() {
+      const apiUrl = 'https://jsonplaceholder.typicode.com/posts/123456789';
+
+      fetch(apiUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          // Process the data and display it on the webpage
+          displayData(data);
+        })
+        .catch((error) => {
+          // Handle errors and display an error message on the webpage
+          displayError(error.message);
+        });
+    }
+
+    function displayData(data) {
+      const postsDiv = document.getElementById('posts');
+      const postList = document.createElement('ul');
+      
+      data.forEach((post) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = post.title;
+        postList.appendChild(listItem);
+      });
+
+      postsDiv.appendChild(postList);
+    }
+
+    function displayError(errorMessage) {
+      const postsDiv = document.getElementById('posts');
+      const errorParagraph = document.createElement('p');
+      errorParagraph.textContent = `Error: ${errorMessage}`;
+      
+      postsDiv.appendChild(errorParagraph);
+    }
+
+    // Call the function to fetch and handle the data
+    fetchDataFromAPI();
+  </script>
+</body>
+</html>
